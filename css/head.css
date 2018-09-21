@@ -487,3 +487,47 @@ a {
     display: block;
     margin: 0 auto;
 }
+
+/*---------- 吸顶导航样式 ----------*/
+#navFix {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 3;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+#navFix .logo {
+    display: block;
+    float: left;
+    margin: 14px 40px 0 0;
+}
+
+#navFix .navBar {
+    float: left;
+}
+#navFix .navBar li {
+    padding: 0 20px;
+    line-height: 60px;
+    height: 60px;
+}
+#navFix .login {
+    float: right;
+    display: block;
+    line-height: 60px;
+}
+#navFix .login a{
+    margin-right: 20px;
+    color: #666666;
+}
+#navFix .cartWrap {
+    position: relative;
+    float: right;
+    top: 20px;
+}
+
+#navFix .navBar li:nth-last-child(1),
+#navFix .navBar li:nth-last-child(2),
+#navFix .navBar li:nth-last-child(3) {
+    display: none;
+}
