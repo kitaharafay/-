@@ -54,18 +54,19 @@ a {
     color: #cccccc;
 }
 
-#head li {
+#head .head li {
     float: left;
     position: relative;
+    z-index: 2;
 }
 
-#head li a {
+#head .head li a {
     color: #cccccc;
     border-left: 1px solid #5c5c5c;
     padding: 0 10px;
 }
 
-#head li a:hover {
+#head .head li a:hover {
     color: #ffffff;
 }
 
@@ -169,7 +170,7 @@ a {
     color: #999999;
 }
 
-#head .down a {
+#head .down .app {
     padding-left: 25px;
     background: url("../images/wangyi/ico_01.png") 10px center no-repeat;
 }
@@ -186,6 +187,7 @@ a {
     left: -25px;
     line-height: 20px;
     display: none;
+    background: #ffffff;
 }
 
 #head .down div span {
@@ -214,6 +216,7 @@ a {
     margin: 16px 40px 0 0;
     font-size: 0;
 }
+
 .search .searchBox input {
     font-size: 12px;
     width: 250px;
@@ -224,10 +227,263 @@ a {
     color: #b4a078;
     outline: none;
 }
+
 .search .searchBox a {
     display: inline-block;
     width: 20px;
     height: 20px;
     background: url("../images/wangyi/ico_03.gif");
     vertical-align: middle;
+}
+
+/*---------- 导航 ----------*/
+.nav {
+    position: relative;
+    background: #ffffff;
+}
+
+.nav .center {
+    position: relative;
+}
+
+.nav .logo, .nav .login {
+    display: none;
+}
+
+.navBar, .nav .subNav {
+    font-size: 0;
+    text-align: center;
+}
+
+.navBar li, .nav .subNav li {
+    font-size: 14px;
+    display: inline-block;
+    padding: 0 30px;
+    height: 50px;
+}
+
+.navBar li.separate {
+    padding: 0;
+    color: #cccccc;
+}
+
+.navBar li a {
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.navBar li a:hover, .navBar li.active a {
+    border-bottom: 3px solid #b4a078;
+}
+
+/*---------- 购物车父级样式 ----------*/
+.cartWrap {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url("../images/wangyi/ico_04.gif");
+    right: 0;
+    top: -80px;
+    cursor: pointer;
+}
+
+.cartWrap i {
+    font: 12px/20px "微软雅黑";
+    position: absolute;
+    color: #ffffff;
+    background: #d4282d;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    top: -12px;
+    right: -12px;
+}
+
+/*---------- 购物车 ----------*/
+.cartWrap .cart {
+    width: 328px;
+    border: 1px solid #b5a176;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 30px;
+    right: -22px;
+    background: #ffffff;
+    padding-top: 15px;
+    display: none;
+}
+
+.cartWrap .cart:before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 8px;
+    background: url("../images/wangyi/ico_17.gif");
+    position: absolute;
+    top: -8px;
+    right: 24px;
+}
+
+.cartWrap .list {
+    height: 244px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cartWrap ul {
+    padding-left: 15px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.cartWrap li {
+    height: 60px;
+    margin-bottom: 10px;
+    font: 12px/25px "微软雅黑";
+
+}
+
+.cartWrap .img {
+    float: left;
+}
+
+.cartWrap img {
+    width: 60px;
+    height: 60px;
+    background: #f4f4f4;
+}
+
+.cartWrap .message {
+    width: 145px;
+    float: left;
+    padding: 5px 0 5px 10px;
+    /*font: 12px/25px "微软雅黑";*/
+}
+
+.cartWrap .message p:nth-child(1) {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.cartWrap .message p:nth-child(2) {
+    color: #c5c5c5;
+}
+
+.cartWrap .price {
+    float: left;
+    padding-top: 5px;
+    width: 55px;
+    /*font: 12px/25px "微软雅黑";*/
+    color: #b62628;
+}
+
+.cartWrap .close {
+    float: left;
+    width: 26px;
+    font-size: 16px;
+    padding-top: 5px;
+}
+
+/*---------- 滚动条样式 ----------*/
+.cartWrap .scrollBar {
+    float: right;
+    width: 17px;
+    height: 244px;
+    background: #f1f1f1;
+}
+
+.cartWrap .scrollBar span {
+    display: block;
+    width: 17px;
+    height: 17px;
+}
+
+.cartWrap .scrollBar .topBtn {
+    background: url("../images/wangyi/topBtn_bg.gif") 0 0;
+}
+
+.cartWrap .scrollBar .topBtn:hover {
+    background: url("../images/wangyi/topBtn_bg.gif") 0 -34px;
+}
+
+.cartWrap .scrollBar .topBtn:active {
+    background: url("../images/wangyi/topBtn_bg.gif") 0 -51px;
+}
+
+.cartWrap .scrollBar .bottomBtn {
+    background: url("../images/wangyi/bottomBtn_bg.gif") 0 0;
+}
+
+.cartWrap .scrollBar .bottomBtn:hover {
+    background: url("../images/wangyi/bottomBtn_bg.gif") 0 -34px;
+}
+
+.cartWrap .scrollBar .bottomBtn:active {
+    background: url("../images/wangyi/bottomBtn_bg.gif") 0 -51px;
+}
+
+.cartWrap .sliderWrap {
+    height: 210px;
+}
+
+.cartWrap .sliderWrap .slide {
+    width: 17px;
+    height: 50px;
+    background: #c1c1c1;
+    position: absolute;
+}
+
+.cartWrap .sliderWrap .slide:hover {
+    background: #a9a9a9;
+}
+
+.cartWrap .sliderWrap .slide:active {
+    background: #787878;
+}
+
+.cartWrap .total {
+    background: #f4f0ea;
+    height: 66px;
+    font: 12px/66px "微软雅黑";
+    text-align: center;
+}
+
+.cartWrap .total span {
+    color: #c04646;
+}
+
+.cartWrap .total a {
+    display: inline-block;
+    width: 110px;
+    height: 36px;
+    line-height: 36px;
+    background: #b4a078;
+    color: #ffffff;
+    margin-left: 20px;
+    border-radius: 2px;
+}
+
+.cartWrap .total a:hover {
+    opacity: 0.8;
+}
+
+/*---------- 弹出导航样式 ----------*/
+.nav .subNav {
+    box-shadow: 0 6px 6px #ececec;
+    padding-bottom: 20px;
+}
+
+.nav .subNav ul {
+    display: none;
+}
+
+.nav .subNav ul li {
+    height: auto;
+}
+
+.nav .subNav img {
+    display: block;
+    margin: 0 auto;
 }
