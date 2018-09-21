@@ -1,0 +1,108 @@
+/*--------- 通用样式 ----------*/
+body, div, h3, h4 {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 14px;
+    font-family: 微软雅黑;
+    color: #333333;
+}
+a {
+    text-decoration: none;
+    color: #333333;
+}
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.clearFix:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+.scaleImg img {
+    transition: 1s ease-out;
+    transform: scale(1);
+}
+.scaleImg:hover img {
+    transform: scale(1.1);
+}
+
+
+
+/*---------- Brand ----------*/
+#brand {
+    width: 1090px;
+    margin: 30px auto;
+}
+.brandHead {
+    margin-bottom: 30px;
+}
+.brandHead h3 {
+    font-size: 28px;
+    color: #666666;
+    margin-right: 20px;
+    display: inline;
+}
+.brandHead .right {
+    padding-top: 18px;
+}
+#brand .bImg {
+    display: flex;
+    justify-content: space-between;
+}
+#brand .bBox {
+    width: 357px;
+    height: 320px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+#brand .bBox h4 {
+    font-size: 24px;
+    color: #666666;
+    font-weight: normal;
+    z-index: 2;
+    position: relative;
+    margin-top: 50px;
+}
+#brand .bBox span {
+    color: #666666;
+    border-top: 1px solid #666666;
+    display: inline-block;
+    padding-top: 20px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+}
+#brand .bBox img {
+    position: absolute;
+    width: 357px;
+    height: 320px;
+    left: 0;
+    top: 0;
+}
+#brand .bBox div {
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    padding-left: 20px;
+    width: 357px;
+    height: 155px;
+}
+#brand .bBox:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+#brand .bBox:last-child img {
+    height: 155px;
+}

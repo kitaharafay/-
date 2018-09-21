@@ -1,0 +1,159 @@
+/*---------- 通用样式 ----------*/
+body, div, ul, li, p, a, span {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    font-family: 微软雅黑;
+    color: #333333;
+}
+
+a {
+    color: #333333;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+.center {
+    width: 1090px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clearFix:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.scaleImg img {
+    transition: 1s ease-out;
+    transform: scale(1);
+}
+
+.scaleImg:hover img {
+    transform: scale(1.1);
+}
+
+/*---------- say ------------*/
+#say {
+    background: #f4f0ea;
+    padding: 40px 0;
+}
+
+#say header {
+    margin-bottom: 20px;
+}
+
+#say h3 {
+    font-size: 28px;
+    margin-right: 10px;
+    display: inline;
+}
+
+#say .content {
+    position: relative;
+}
+
+#say .carouselImgCon {
+    position: relative;
+    height: 535px;
+    overflow: hidden;
+}
+
+#say .content ul {
+    position: absolute;
+    width: 2000px;
+    left: 0;
+}
+
+#say .content li {
+    width: 353px;
+    padding: 1px;
+    background: #ffffff;
+    float: left;
+    margin-right: 10px;
+}
+
+#say .content li a {
+    display: block;
+    width: 353px;
+    height: 353px;
+    overflow: hidden;
+}
+
+#say .content li img {
+    width: 353px;
+    height: 353px;
+}
+
+#say .content li div {
+    top: -40px;
+    position: relative;
+    width: 345px;
+    height: 180px;
+    background: #ffffff;
+    left: 4px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+#say .content li p:nth-child(1) {
+    color: #999999;
+}
+
+#say .content li p:nth-child(2) {
+    margin: 10px 0 15px 0;
+}
+
+#say .content li p .left {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#say .content li p .right {
+    font-size: 12px;
+    color: #b4a078;
+}
+
+.prev, .next {
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 50px;
+    background-color: #d0c4af;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    cursor: default;
+    overflow: hidden;
+    user-select: none;
+}
+
+#say .prev {
+    left: -60px;
+}
+
+#say .next {
+    right: -60px;
+}

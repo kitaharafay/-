@@ -1,0 +1,233 @@
+/*--------- 通用样式 ----------*/
+body, div, ul, li, a, p, h1 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    font-family: 微软雅黑;
+    color: #333333;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.center {
+    width: 1090px;
+    margin: 0 auto;
+}
+
+.clearFix:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/*---------- head ----------*/
+#head {
+    border-bottom: 1px solid #f3f3f3;
+    box-shadow: 0 2px 2px #f3f3f3;
+}
+
+#head .head {
+    background: #333333;
+    font-size: 12px;
+    line-height: 36px;
+}
+
+#head .head .left {
+    color: #cccccc;
+}
+
+#head li {
+    float: left;
+    position: relative;
+}
+
+#head li a {
+    color: #cccccc;
+    border-left: 1px solid #5c5c5c;
+    padding: 0 10px;
+}
+
+#head li a:hover {
+    color: #ffffff;
+}
+
+#head .right .noBorder {
+    border: none;
+}
+
+#head .margin {
+    margin-right: 10px;
+}
+
+#head .customer {
+    padding-right: 10px;
+    margin-right: 10px;
+    background: url("../images/wangyi/customer_bg1.gif") 68px center no-repeat;
+}
+
+#head .customer:hover {
+    background: url("../images/wangyi/customer_bg2.gif") 68px center no-repeat;
+}
+
+#head .customer ul {
+    position: absolute;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+    display: none;
+}
+
+#head .customer:hover ul {
+    display: block;
+}
+
+#head .customer ul li {
+    float: none;
+    padding: 0;
+}
+
+#head .customer ul:before, #head .down div:before {
+    width: 10px;
+    height: 6px;
+    content: '';
+    display: block;
+    background: url("../images/wangyi/ico_02.png");
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: -6px;
+}
+
+#head .customer ul a {
+    display: block;
+    border-left: none;
+    border-bottom: 1px solid #dddddd;
+    margin: 0 10px;
+    padding: 0;
+    text-align: center;
+    color: #999999;
+}
+
+#head .customer ul a:hover {
+    color: #b4a078;
+}
+
+#head .customer ul a.noBorder {
+    border: none;
+}
+
+#head .customer ul li.phone {
+    background: url("../images/wangyi/phone_bg1.gif") 62px center no-repeat;
+}
+
+#head .customer ul li.phone:hover {
+    background: url("../images/wangyi/phone_bg2.gif") 62px center no-repeat;
+}
+
+#head .customer ul li.phone:hover div {
+    display: block;
+}
+
+#head .customer ul li.phone div {
+    position: absolute;
+    width: 110px;
+    height: 57px;
+    right: -110px;
+    top: 0;
+    line-height: 20px;
+    background: #ffffff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: none;
+}
+
+#head .customer ul li.phone div p:nth-child(1) {
+    font-size: 14px;
+    color: #999999;
+    margin-top: 12px;
+}
+
+#head .customer ul li.phone div p:nth-child(2) {
+    color: #999999;
+}
+
+#head .down a {
+    padding-left: 25px;
+    background: url("../images/wangyi/ico_01.png") 10px center no-repeat;
+}
+
+#head .down:hover div {
+    display: block;
+}
+
+#head .down div {
+    position: absolute;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    left: -25px;
+    line-height: 20px;
+    display: none;
+}
+
+#head .down div span {
+    color: #b4a078;
+}
+
+/*---------- 搜索search ----------*/
+.search {
+    margin: 40px 0;
+}
+
+.search .center {
+    position: relative;
+    height: 60px;
+}
+
+.search h1 {
+    position: absolute;
+    left: 50%;
+    margin-left: -90px;
+}
+
+.search .searchBox {
+    float: right;
+    height: 25px;
+    margin: 16px 40px 0 0;
+    font-size: 0;
+}
+.search .searchBox input {
+    font-size: 12px;
+    width: 250px;
+    height: 24px;
+    line-height: 24px;
+    border: none;
+    border-bottom: 1px solid #d8cebc;
+    color: #b4a078;
+    outline: none;
+}
+.search .searchBox a {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../images/wangyi/ico_03.gif");
+    vertical-align: middle;
+}

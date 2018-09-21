@@ -1,0 +1,188 @@
+/*---------- 通用样式 ----------*/
+body, p, dl, dt, dd, a, div, h4 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    font-family: 微软雅黑;
+    color: #333333;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+.center {
+    width: 1090px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.clearFix:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/*---------- footer ----------*/
+footer {
+    text-align: center;
+}
+
+footer .message {
+    background: #ffffff;
+    padding: 40px 0;
+    border-top: 1px solid #e8e8e8;
+}
+
+footer .message .center {
+    display: flex;
+}
+
+footer .message .box {
+    width: 360px;
+}
+
+footer .message .box h4 {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+footer .message .phone {
+    font-size: 26px;
+}
+
+footer .message .workTime {
+    margin: 20px 0 30px 0;
+}
+
+footer .message .btn a {
+    display: inline-block;
+    width: 100px;
+    line-height: 28px;
+    font-size: 14px;
+    border: 1px solid #666666;
+    margin: 0 10px;
+}
+
+footer .message .btn a:hover {
+    background: #666666;
+    color: #ffffff;
+}
+
+footer .message .box:nth-child(2) {
+    border-left: 1px solid #e9e9e9;
+    border-right: 1px solid #e9e9e9;
+    padding: 0 30px;
+    width: 370px;
+}
+
+footer .message .box:nth-child(2) p {
+    text-align: left;
+}
+
+footer .message dl {
+    margin-top: 30px;
+    line-height: 32px;
+}
+
+footer .message dd {
+    margin-left: 18px;
+}
+
+footer .message .money {
+    color: #b4a078;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+footer .foot {
+    background: #414141;
+}
+
+footer .foot .title {
+    height: 51px;
+    line-height: 51px;
+    padding: 40px 0;
+    font-size: 18px;
+    color: #ffffff;
+    border-bottom: 1px solid #4f4f4f;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .foot .title div {
+    padding-left: 70px;
+}
+
+footer .foot .title div:nth-child(1) {
+    background: url("../images/wangyi/ico_08.gif") left no-repeat;
+}
+
+footer .foot .title div:nth-child(2) {
+    background: url("../images/wangyi/ico_09.gif") left no-repeat;
+}
+
+footer .foot .title div:nth-child(3) {
+    background: url("../images/wangyi/ico_10.gif") left no-repeat;
+}
+
+footer .foot .copy {
+    padding: 30px 0;
+    color: #999999;
+    line-height: 20px;
+}
+footer .foot .copy a {
+    color: #999999;
+    margin: 0 2px;
+}
+/*---------- 侧边栏 ----------*/
+#slideBar {
+    width: 60px;
+    position: fixed;
+    bottom: 20px;
+    right: 1%;
+    text-align: center;
+    background: #ffffff;
+}
+#slideBar .top {
+    border: 1px solid #dddddd;
+    font-size: 12px;
+}
+#slideBar .top a {
+    display: block;
+    padding-top: 30px;
+    margin: 10px 0;
+}
+#slideBar .top a:nth-child(1) {
+    background: url("../images/wangyi/ico_11.gif") top center no-repeat;
+}
+#slideBar .top a:nth-child(2) {
+    background: url("../images/wangyi/ico_12.gif") top center no-repeat;
+}
+#slideBar .top a:nth-child(3) {
+    background: url("../images/wangyi/ico_13.gif") top center no-repeat;
+}
+#slideBar .back {
+    color: #ffffff;
+    height: 45px;
+    display: block;
+    padding-top: 20px;
+    box-sizing: border-box;
+    background: #999999 url("../images/wangyi/ico_14.gif") center 8px no-repeat;
+}
+#slideBar .back:hover {
+    background-color: #b4a078;
+}

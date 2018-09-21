@@ -1,0 +1,83 @@
+/*--------- 通用样式 ----------*/
+body, div, a, img {
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 14px;
+    color: #333;
+    font-family: "微软雅黑";
+}
+a {
+    text-decoration: none;
+}
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+/*---------- Banner ----------*/
+.bannerPic {
+    height: 420px;
+    position: relative;
+    overflow: hidden;
+}
+.bannerPic .carouselImgCon {
+    position: relative;
+}
+.bannerPic .carouselImgCon a {
+    position: absolute;
+    left: 50%;
+    margin-left: -960px;
+}
+.bannerPic .carouselImgCon img {
+    opacity: 0;
+}
+.prev, .next {
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 50px;
+    background-color: #d0c4af;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    cursor: default;
+    overflow: hidden;
+    user-select: none;
+}
+.bannerPic .prev {
+    left: 20%;
+}
+.bannerPic .next {
+    right: 20%;
+}
+.bannerPic .prev:hover, .bannerPic .next:hover {
+    background-color: #b19e7a;
+}
+.bannerPic .circle {
+    height: 30px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.bannerPic .circle span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin: 0 10px;
+    border: 1px solid #d6d5d5;
+}
+.bannerPic .circle span.active, .bannerPic .circle span:hover {
+    background-color: #a7936e;
+    border: 3px solid #dfcead;
+    width: 4px;
+    height: 4px;
+    transform: scale(2);
+}

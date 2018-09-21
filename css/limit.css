@@ -1,0 +1,197 @@
+/*--------- 通用样式 ----------*/
+body, div, p, h3, h4 {
+    margin: 0;
+}
+
+body {
+    font-size: 14px;
+    font-family: 微软雅黑;
+    color: #333333;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clearFix:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.scaleImg img {
+    transition: 1s ease-out;
+    transform: scale(1);
+}
+
+.scaleImg:hover img {
+    transform: scale(1.1);
+}
+
+/*---------- limit ----------*/
+#limit {
+    width: 1090px;
+    margin: 40px auto;
+}
+
+#limit h3 {
+    font-size: 28px;
+    color: #666666;
+}
+
+#limit header {
+    margin-bottom: 20px;
+}
+
+#limit header .right {
+    padding-top: 5px;
+}
+
+#limit .time {
+    width: 224px;
+    height: 377px;
+    background: url("../images/wangyi/time_bg.jpg") no-repeat center;
+    text-align: center;
+}
+
+#limit .time h4 {
+    font-size: 28px;
+    font-weight: normal;
+    color: #615248;
+    margin-top: 60px;
+}
+
+#limit .time p {
+    font-size: 18px;
+    color: #615248;
+    margin: 40px 0 20px 0;
+}
+
+#limit .timeBox span {
+    display: inline-block;
+    width: 40px;
+    line-height: 40px;
+    color: #ffffff;
+    font-size: 18px;
+    background: #615248;
+    border-radius: 5px;
+    margin: 0 2px;
+}
+
+#limit .time a {
+    display: inline-block;
+    width: 110px;
+    line-height: 30px;
+    color: #ffffff;
+    background: #a7936e;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+#limit .boxWrap {
+    width: 866px;
+}
+
+#limit .limitBox {
+    width: 432px;
+    height: 177px;
+    border: 1px solid #f4ecef;
+    border-left: none;
+    padding-top: 10px;
+}
+
+#limit .limitBox:nth-of-type(3), #limit .limitBox:nth-of-type(4) {
+    border-top: none;
+}
+
+#limit .limitBox a.left {
+    width: 180px;
+    height: 177px;
+    overflow: hidden;
+}
+
+#limit .limitBox img {
+    width: 180px;
+    height: 177px;
+}
+
+#limit .limitBox .right {
+    width: 252px;
+}
+
+#limit .limitBox .title {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+#limit .limitBox p {
+    line-height: 24px;
+    color: #999999;
+}
+
+#limit .numBar {
+    margin: 10px 0;
+    line-height: 12px;
+    font-size: 12px;
+    color: #999999;
+}
+
+#limit .numCon {
+    width: 152px;
+    height: 10px;
+    border: 1px solid #f2cecd;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+#limit .numCon span {
+    display: block;
+    width: 50%;
+    height: 100%;
+    background: #ffe5e5;
+}
+
+#limit .limitPrice {
+    color: #be4141;
+}
+
+#limit .currency {
+    font-size: 18px;
+    color: #be4141;
+    margin-left: 5px;
+}
+
+#limit strong {
+    color: #be4141;
+    font-size: 24px;
+}
+
+#limit .price {
+    color: #999999;
+    margin-left: 10px;
+}
+
+#limit .atOnce {
+    display: block;
+    width: 118px;
+    line-height: 31px;
+    color: #ffffff;
+    font-size: 16px;
+    background: #da4f4f;
+    text-align: center;
+    margin-top: 10px;
+}

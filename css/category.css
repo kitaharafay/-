@@ -1,0 +1,110 @@
+/*--------- 通用样式 ----------*/
+body, div, ul, li, a {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    font-family: 微软雅黑;
+    color: #333333;
+}
+
+a {
+    color: #333333;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clearFix {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.scaleImg img {
+    transition: 1s ease-out;
+    transform: scale(1);
+}
+
+.scaleImg:hover img {
+    transform: scale(1.1);
+}
+
+/*---------- category ----------*/
+.category {
+    width: 1090px;
+    margin: 40px auto;
+}
+
+.category h3 {
+    font-size: 28px;
+    margin-right: 10px;
+    display: inline;
+    color: #666666;
+}
+
+.category .left span {
+    border-left: 1px solid #666666;
+    padding: 3px 0 0 5px;
+}
+
+.category .right {
+    margin-top: 8px;
+}
+
+.category header li {
+    display: inline;
+}
+
+.category header li a {
+    margin: 0 10px;
+}
+
+.category .more {
+    margin-left: 20px;
+}
+
+.category .categoryBigImg img {
+    width: 1090px;
+    height: 320px;
+    margin: 20px auto;
+}
+
+.category .categoryList {
+    display: flex;
+    justify-content: space-between;
+}
+
+.category .categoryList li {
+    text-align: center;
+}
+
+.category .categoryList img {
+    width: 250px;
+    height: 250px;
+}
+
+.category .categoryList p a {
+    line-height: 26px;
+}
+
+.category .categoryList span {
+    color: #d4282d;
+}

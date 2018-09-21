@@ -1,0 +1,156 @@
+/*--------- 通用样式 ----------*/
+body, ul, li, a, span, img, section, header, p, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    color: #333333;
+    font-family: "微软雅黑";
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clearFix:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/*---------- new ----------*/
+#new {
+    width: 1090px;
+    margin: 50px auto;
+}
+
+.brandHead {
+    margin-bottom: 30px;
+}
+
+.brandHead h3 {
+    font-size: 28px;
+    color: #666666;
+    margin-right: 20px;
+    display: inline;
+}
+
+.prev, .next {
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 50px;
+    background-color: #d0c4af;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    cursor: default;
+    overflow: hidden;
+    user-select: none;
+}
+
+#new .content {
+    position: relative;
+}
+
+#new .carouselImgCon {
+    height: 327px;
+    position: relative;
+    overflow: hidden;
+}
+
+#new ul {
+    width: 2200px;
+    position: absolute;
+    left: 0;
+}
+
+#new li {
+    width: 265px;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+#new li:hover {
+    background: #f4f0ea;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+#new li:hover img:nth-of-type(1) {
+    display: none;
+}
+
+#new li:hover img:nth-of-type(2) {
+    display: block;
+}
+
+.colorNum {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #a7936e;
+    border: 1px solid #b3a07d;
+    background: #f4f0ea;
+    padding: 0 4px;
+    border-radius: 5px;
+}
+
+#new img {
+    width: 265px;
+    height: 265px;
+}
+
+#new img:nth-of-type(2) {
+    display: none;
+}
+
+#new .title {
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+}
+
+#new .title a {
+    font-weight: bold;
+}
+
+#new .title p {
+    color: #d4282d;
+    margin-top: 5px;
+}
+
+#new .prev {
+    left: -70px;
+}
+
+#new .next {
+    right: -70px;
+}

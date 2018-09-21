@@ -1,0 +1,153 @@
+/*--------- 通用样式 ----------*/
+body, div, ul, li, a, h3, p, header, section {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    color: #333333;
+    font-family: "微软雅黑";
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.center {
+    width: 1090px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clearFix:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.scaleImg img {
+    transition: 1s ease-out;
+    transform: scale(1);
+}
+
+.scaleImg:hover img {
+    transform: scale(1.1);
+}
+
+/*---------- recommend ----------*/
+#recommend {
+    background: #f4f0ea;
+    padding: 50px 0;
+}
+
+#recommend header {
+    margin-bottom: 20px;
+}
+
+#recommend header h3 {
+    font-size: 28px;
+    margin-right: 20px;
+    float: left;
+    color: #666666;
+}
+
+#recommend header li {
+    float: left;
+    line-height: 28px;
+    margin-right: 50px;
+    cursor: pointer;
+    padding-top: 5px;
+}
+
+#recommend header li:hover, #recommend header li.active {
+    border-bottom: 2px solid #b4a078;
+}
+
+#recommend header .right {
+    line-height: 28px;
+    padding-top: 5px;
+}
+
+#recommend .box {
+    position: relative;
+    background: #ffffff;
+    width: 223px;
+    height: 210px;
+    float: left;
+    margin-left: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+#recommend .box:nth-child(1) {
+    width: 390px;
+    height: 430px;
+    margin-left: 0;
+}
+
+#recommend .box:nth-child(5) {
+    margin-top: 10px;
+}
+
+#recommend .box:nth-child(6) {
+    margin-top: 10px;
+}
+
+#recommend .box:nth-child(7) {
+    margin-top: 10px;
+}
+
+.colorNum {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #a7936e;
+    border: 1px solid #b3a07d;
+    background: #f4f0ea;
+    padding: 0 4px;
+    border-radius: 5px;
+}
+
+#recommend img {
+    width: 180px;
+    height: 170px;
+}
+
+#recommend .box:nth-child(1) img {
+    width: 390px;
+    height: 390px;
+}
+
+#recommend .title {
+    text-align: center;
+    font-size: 12px;
+}
+
+#recommend .title a {
+    font-weight: bold;
+}
+
+#recommend .title p {
+    color: #d4282d;
+    margin-top: 5px;
+}
