@@ -45,9 +45,12 @@ img {
     position: absolute;
     top: 50%;
     margin-top: -25px;
-    cursor: default;
+    cursor: pointer;
     overflow: hidden;
     user-select: none;
+}
+.prev:hover , .next:hover {
+    background: #b4a078;
 }
 .bannerPic .prev {
     left: 20%;
