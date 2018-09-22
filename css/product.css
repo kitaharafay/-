@@ -1,7 +1,11 @@
 /*---------- 通用样式 ----------*/
-body, a, h2, p, dl, dt, dd, i, input,span {
+body, a, h2, p, dl, dt, dd, i, input, span, ul, li {
     padding: 0;
     margin: 0;
+}
+
+ul {
+    list-style: none;
 }
 
 body {
@@ -27,6 +31,20 @@ a {
 
 .right {
     float: right;
+}
+
+.center {
+    width: 1090px;
+    margin: 0 auto;
+}
+
+.scaleImg img {
+    transition: 1s ease-out;
+    transform: scale(1);
+}
+
+.scaleImg:hover img {
+    transform: scale(1.1);
 }
 
 /*---------- 面包屑 ----------*/
@@ -149,6 +167,7 @@ a {
     color: #666666;
     margin: 20px 0;
 }
+
 #productImg .format dt {
     float: left;
     margin-right: 30px;
@@ -189,6 +208,7 @@ a {
     box-sizing: border-box;
     user-select: none;
 }
+
 #productImg .format .number dd input {
     display: inline-block;
     width: 60px;
@@ -201,12 +221,15 @@ a {
     border-left: none;
     outline: none;
 }
+
 #productImg .noClick {
     opacity: 0.5;
 }
-#productImg .noClick span, input{
+
+#productImg .noClick span, input {
     cursor: not-allowed;
 }
+
 #productImg .btn-group {
     font-size: 0;
 }
@@ -221,6 +244,7 @@ a {
     margin-right: 10px;
     vertical-align: bottom;
 }
+
 #productImg .btn-group a:hover {
     opacity: 0.8;
 }
@@ -230,6 +254,7 @@ a {
     background: #f5f3ef;
     color: #b4a078;
 }
+
 #productImg .btn-group .buy:hover {
     background: #ffffff;
 }
@@ -255,9 +280,101 @@ a {
     margin: 0;
     background: url("../images/wangyi/collection_bg.gif") 16px no-repeat;
 }
+
 #productImg .btn-group .collect p {
     width: 48px;
     height: 23px;
     line-height: 23px;
     text-align: center;
 }
+
+/*---------- 大家都在看 ----------*/
+#look {
+    margin: 20px auto;
+}
+
+#look .center {
+    border: 1px solid #e8e8e8;
+}
+
+#look h3 {
+    font: bold 18px/44px "微软雅黑";
+    background: #f5f5f5;
+    text-indent: 20px;
+}
+
+#look .content {
+    position: relative;
+}
+
+#look .carouselImgCon {
+    position: relative;
+    height: 250px;
+    padding-bottom: 20px;
+    margin: 0 80px;
+    overflow: hidden;
+}
+
+#look ul {
+    width: 1920px;
+    position: absolute;
+    left: 0;
+}
+
+#look ul li {
+    float: left;
+    width: 210px;
+    text-align: center;
+    margin-right: 30px;
+}
+
+#look ul li a {
+    font: bold 12px/12px "微软雅黑";
+    display: block;
+}
+
+#look ul li image {
+    width: 210px;
+    height: 210px;
+}
+
+#look ul li span {
+    display: block;
+    font: 12px/12px "微软雅黑";
+    color: #d4282d;
+    margin-top: 16px;
+}
+
+.prev, .next {
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 50px;
+    background-color: #d0c4af;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    overflow: hidden;
+    user-select: none;
+    cursor: pointer;
+}
+.prev:hover , .next:hover {
+    background: #b4a078;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+#look div.noClick {
+    background: #dddddd;
+    cursor: not-allowed;
+}
+
