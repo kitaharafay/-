@@ -32,7 +32,7 @@ a {
 /*---------- 面包屑 ----------*/
 #position {
     width: 1090px;
-    margin: 0 auto;
+    margin: 0px auto;
     line-height: 60px;
     font-size: 12px;
     color: #999999;
@@ -50,6 +50,7 @@ a {
 #productImg {
     width: 1090px;
     margin: 0 auto;
+    padding-bottom: 40px;
 }
 
 #productImg div.left {
@@ -170,14 +171,14 @@ a {
     background: url("../images/wangyi/ico_16.gif") right bottom no-repeat;
 }
 
-#productImg .format dd:nth-last-child(1) {
+#productImg .format .number dd {
     border: none;
     font-size: 0;
     font-family: 微软雅黑;
     padding: 0;
 }
 
-#productImg .format dd:nth-last-child(1) span {
+#productImg .format .number dd span {
     display: inline-block;
     width: 36px;
     height: 30px;
@@ -188,7 +189,7 @@ a {
     box-sizing: border-box;
     user-select: none;
 }
-#productImg .format dd:nth-last-child(1) input {
+#productImg .format .number dd input {
     display: inline-block;
     width: 60px;
     height: 30px;
