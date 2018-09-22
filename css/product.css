@@ -1,5 +1,5 @@
 /*---------- 通用样式 ----------*/
-body, a {
+body, a, h2, p, dl, dt, dd, i, input,span {
     padding: 0;
     margin: 0;
 }
@@ -9,6 +9,7 @@ body {
     font-family: "微软雅黑";
     color: #333333;
 }
+
 a {
     text-decoration: none;
     color: #333333;
@@ -19,9 +20,11 @@ a {
     clear: both;
     display: block;
 }
+
 .left {
     float: left;
 }
+
 .right {
     float: right;
 }
@@ -34,9 +37,226 @@ a {
     font-size: 12px;
     color: #999999;
 }
+
 #position a {
     padding: 0 1em;
 }
-#position a:hover{
+
+#position a:hover {
     text-decoration: underline;
+}
+
+/*---------- 产品图片 ----------*/
+#productImg {
+    width: 1090px;
+    margin: 0 auto;
+}
+
+#productImg div.left {
+    width: 530px;
+}
+
+#productImg img.left {
+    width: 428px;
+    height: 428px;
+    border: 1px solid #e8e8e8;
+}
+
+#productImg .smallImg {
+    width: 78px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+#productImg .smallImg img {
+    width: 78px;
+    height: 78px;
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#productImg .smallImg img.active, #productImg .smallImg img:hover {
+    border: 2px solid #b4a078;
+}
+
+#productImg .info {
+    width: 510px;
+}
+
+#productImg .info h2 {
+    font: bold 20px/20px "微软雅黑";
+}
+
+#productImg .info p {
+    font: 12px/56px "微软雅黑";
+    color: #999999;
+}
+
+#productImg .price {
+    background: #f5f3ef;
+    border: 1px dotted #dedede;
+    padding: 15px 0;
+    line-height: 28px;
+}
+
+#productImg .price span {
+    padding-left: 10px;
+    margin-right: 30px;
+    font-size: 12px;
+    color: #666666;
+}
+
+#productImg strong {
+    color: #d4282d;
+    font: bold 22px/22px "微软雅黑";
+}
+
+#productImg .price a.tag {
+    display: inline-block;
+    background: #d4282d;
+    font: 12px/18px "微软雅黑";
+    color: #ffffff;
+    padding: 0 10px;
+    margin-right: 10px;
+}
+
+#productImg .price a.service {
+    font-size: 12px;
+    color: #666666;
+}
+
+#productImg .price i {
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    background: url("../images/wangyi/ico_15.gif") no-repeat;
+    vertical-align: middle;
+    margin: 0 5px 0 15px;
+}
+
+#productImg .price i:nth-of-type(1) {
+    margin-left: 0;
+}
+
+#productImg .format dl {
+    line-height: 32px;
+    height: 34px;
+    font-size: 12px;
+    color: #666666;
+    margin: 20px 0;
+}
+#productImg .format dt {
+    float: left;
+    margin-right: 30px;
+    padding-left: 10px;
+}
+
+#productImg .format dd {
+    height: 32px;
+    line-height: 28px;
+    float: left;
+    padding: 0 10px;
+    margin-right: 10px;
+    border: 1px solid #b4a078;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+#productImg .format dd.active {
+    border: 2px solid #b4a078;
+    background: url("../images/wangyi/ico_16.gif") right bottom no-repeat;
+}
+
+#productImg .format dd:nth-last-child(1) {
+    border: none;
+    font-size: 0;
+    font-family: 微软雅黑;
+    padding: 0;
+}
+
+#productImg .format dd:nth-last-child(1) span {
+    display: inline-block;
+    width: 36px;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 28px;
+    border: 1px solid #dddddd;
+    box-sizing: border-box;
+    user-select: none;
+}
+#productImg .format dd:nth-last-child(1) input {
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    box-sizing: border-box;
+    vertical-align: top;
+    border: 1px solid #dddddd;
+    border-right: none;
+    border-left: none;
+    outline: none;
+}
+#productImg .noClick {
+    opacity: 0.5;
+}
+#productImg .noClick span, input{
+    cursor: not-allowed;
+}
+#productImg .btn-group {
+    font-size: 0;
+}
+
+#productImg .btn-group a {
+    display: inline-block;
+    width: 168px;
+    line-height: 47px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 2px;
+    margin-right: 10px;
+    vertical-align: bottom;
+}
+#productImg .btn-group a:hover {
+    opacity: 0.8;
+}
+
+#productImg .btn-group .buy {
+    border: 1px solid #b4a078;
+    background: #f5f3ef;
+    color: #b4a078;
+}
+#productImg .btn-group .buy:hover {
+    background: #ffffff;
+}
+
+#productImg .btn-group .join {
+    border: 1px solid #b4a078;
+    background: #b4a078 url("../images/wangyi/join_bg.gif") 25px 13px no-repeat;
+    text-indent: 1.4em;
+    color: #ffffff;
+}
+
+#productImg .btn-group .collect {
+    display: inline-block;
+    width: 48px;
+    border: 1px solid #dddddd;
+    font-size: 0;
+    cursor: pointer;
+}
+
+#productImg .btn-group .collect div {
+    width: 48px;
+    height: 24px;
+    margin: 0;
+    background: url("../images/wangyi/collection_bg.gif") 16px no-repeat;
+}
+#productImg .btn-group .collect p {
+    width: 48px;
+    height: 23px;
+    line-height: 23px;
+    text-align: center;
 }
