@@ -1,0 +1,24 @@
+/*---------- 通用样式 ----------*/
+body, div {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+/*---------- 404 ----------*/
+.logo {
+    text-align: center;
+    margin: 60px auto;
+}
+
+.noFound {
+    text-align: center;
+}
+
+footer {
+    height: 222px;
+    background: url("../images/wangyi/404_bg.png");
+    position: absolute;
+    width: 100%;
+}
