@@ -432,11 +432,17 @@
 /*---------- 弹出导航样式 ----------*/
 .nav .subNav {
     box-shadow: 0 6px 6px #ececec;
-    padding-bottom: 20px;
+    position: absolute;
+    top: 50px;
+    z-index: 2;
+    background: #ffffff;
+    width: 100%;
+    transition: opacity 0.3s ease-out;
 }
 
 .nav .subNav ul {
     display: none;
+    padding: 10px 0 20px 0;
 }
 
 .nav .subNav ul li {
@@ -455,6 +461,15 @@
     top: 0;
     z-index: 3;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    animation: navMove 0.3s;
+}
+@keyframes navMove {
+    0% {
+        top: -60px;
+    }
+    100% {
+        top: 0;
+    }
 }
 
 #navFix .logo {
@@ -474,6 +489,7 @@
 #navFix .login {
     float: right;
     display: block;
+    height: 60px;
     line-height: 60px;
 }
 #navFix .login a{
