@@ -131,7 +131,7 @@
     float: left;
     padding: 0 10px;
     margin-right: 10px;
-    border: 1px solid #b4a078;
+    border: 1px solid #dddddd;
     cursor: pointer;
     box-sizing: border-box;
 }
@@ -140,44 +140,64 @@
     border: 2px solid #b4a078;
     background: url("../images/wangyi/ico_16.gif") right bottom no-repeat;
 }
-
-#productImg .format .number dd {
-    border: none;
-    font-size: 0;
-    font-family: 微软雅黑;
-    padding: 0;
+#productImg .format dd.noClick {
+    cursor: not-allowed;
+    opacity: 0.5;
+    border: 1px dashed #e4e4e4;
 }
 
-#productImg .format .number dd span {
-    display: inline-block;
-    width: 36px;
-    height: 30px;
-    font-size: 20px;
-    text-align: center;
-    line-height: 28px;
+#productImg .number {
+    margin: 20px 0;
+    padding-left: 10px;
+    font-size: 0px;
+    line-height: 32px;
+    color: #666666;
+}
+
+#productImg .number .nTitle {
+    margin-right: 30px;
+    font-size: 12px;
+    float: left;
+}
+#productImg .number .surplus {
+    margin-left: 20px;
+    font-size: 12px;
+    float: left;
+}
+
+#productImg .number div {
+    float: left;
+}
+
+#productImg .number div span{
+    float: left;
     border: 1px solid #dddddd;
-    box-sizing: border-box;
+    height: 30px;
+    width: 36px;
+    font-size: 28px;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
     user-select: none;
 }
-
-#productImg .format .number dd input {
-    display: inline-block;
-    width: 60px;
-    height: 30px;
+#productImg .number input {
+    float: left;
     text-align: center;
-    box-sizing: border-box;
-    vertical-align: top;
+    height: 30px;
+    width: 60px;
+    vertical-align: auto;
     border: 1px solid #dddddd;
-    border-right: none;
     border-left: none;
-    outline: none;
+    border-right: none;
+    color: #000;
 }
 
 #productImg .noClick {
     opacity: 0.5;
+    cursor: not-allowed;
 }
 
-#productImg .noClick span, input {
+#productImg .number .noClick span, #productImg .number .noClick input {
     cursor: not-allowed;
 }
 
@@ -284,7 +304,7 @@
     display: block;
 }
 
-#look ul li image {
+#look ul li a img {
     width: 210px;
     height: 210px;
 }
@@ -364,6 +384,10 @@
 
 #bottom .title span {
     color: #b4a078;
+}
+
+#bottom .content > div {
+    display: none;
 }
 
 #bottom table {
@@ -460,17 +484,19 @@
     border: 1px dashed #e8e8e8;
     padding: 30px 0;
     overflow: hidden;
+    margin: 10px 0;
 }
+
 #bottom .evaluate li li {
     padding: 0;
     border: none;
 }
 
 #bottom .evaluate li:last-child {
-    border: none;
+    /*border: none;*/
 }
 
-#bottom  .avatar {
+#bottom .avatar {
     float: left;
     width: 90px;
     text-align: center;
@@ -492,6 +518,7 @@
     vertical-align: middle;
     margin-right: 6px;
 }
+
 #bottom .avatar span {
     vertical-align: middle;
     font-size: 12px;
@@ -506,6 +533,7 @@
 #bottom .text p {
     line-height: 20px;
 }
+
 #bottom .smallImg {
     margin: 15px 0;
 }
@@ -518,14 +546,17 @@
     cursor: pointer;
     margin-right: 10px;
 }
-#bottom .smallImg span img{
+
+#bottom .smallImg span img {
     width: 60px;
     height: 60px;
 }
+
 #bottom .color {
     font-size: 12px;
     color: #9f9f9f;
 }
+
 #bottom .dialog {
     border: 1px solid #e8e8e8;
     background: #f5f5f5;
@@ -566,6 +597,7 @@
     top: 10px;
     cursor: pointer;
 }
+
 #bottom .dialog .close:hover {
     color: #999999;
 }
@@ -584,6 +616,10 @@
     border-left: none;
     cursor: pointer;
 }
+#bottom .page span:nth-child(1) {
+    border: 1px solid #e6e6e6;
+}
+
 #bottom .page span.mainPage {
     border-left: 1px solid #e6e6e6;
 }
@@ -593,9 +629,11 @@
     color: #ffffff;
     border-color: #b4a078;
 }
+
 #bottom .page span:hover {
     color: #b4a078;
 }
+
 #bottom .page span.active:hover {
     opacity: 0.9;
     color: #ffffff;
@@ -611,12 +649,14 @@
     border: 1px solid #e8e8e8;
     margin-bottom: 30px;
 }
+
 #bottom .special h3 {
     font: bold 18px/41px "微软雅黑";
     text-align: center;
     background: #f5f5f5;
     border-bottom: 1px solid #e8e8e8;
 }
+
 #bottom .special div {
     margin: 20px auto;
     width: 260px;

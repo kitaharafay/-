@@ -271,6 +271,7 @@
     background: #ffffff;
     padding-top: 15px;
     display: none;
+    z-index: 10;
 }
 
 .cartWrap .cart:before {
@@ -283,6 +284,7 @@
     top: -8px;
     right: 24px;
 }
+
 
 .cartWrap .list {
     height: 244px;
@@ -386,6 +388,7 @@
 
 .cartWrap .sliderWrap {
     height: 210px;
+    position: relative;
 }
 
 .cartWrap .sliderWrap .slide {
@@ -463,6 +466,7 @@
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
     animation: navMove 0.3s;
 }
+
 @keyframes navMove {
     0% {
         top: -60px;
@@ -481,21 +485,25 @@
 #navFix .navBar {
     float: left;
 }
+
 #navFix .navBar li {
     padding: 0 20px;
     line-height: 60px;
     height: 60px;
 }
+
 #navFix .login {
     float: right;
     display: block;
     height: 60px;
     line-height: 60px;
 }
-#navFix .login a{
+
+#navFix .login a {
     margin-right: 20px;
     color: #666666;
 }
+
 #navFix .cartWrap {
     position: relative;
     float: right;

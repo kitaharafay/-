@@ -25,6 +25,10 @@ img {
     vertical-align: middle;
 }
 
+.original {
+    background: url("../images/wangyi/original.png") center no-repeat;
+}
+
 .center {
     width: 1090px;
     margin: 0 auto;
@@ -52,4 +56,6 @@ img {
 .scaleImg:hover img {
     transform: scale(1.1);
 }
+
+
 
