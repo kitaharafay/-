@@ -45,21 +45,32 @@ sayPic.init({
 
 //人气推荐选项卡
 (function () {
-    var titles = yx.ga('#recommend header li');
-    var contents = yx.ga('#recommend .content');
+    // var titles = yx.ga('#recommend header li');
+    // var contents = yx.ga('#recommend .content');
 
-    console.log('tab');
-    for (var i = 0; i < titles.length; i++) {
-        titles[i].index = i;
-        titles[i].onclick = function () {
-            for (var i = 0; i < titles.length; i++) {
-                titles[i].className = '';
-                contents[i].style.display = 'none';
-            }
-            titles[this.index].className = 'active';
-            contents[this.index].style.display = 'block';
-        }
-    }
+    var $titles = $('#recommend header li');
+    var $contents = $('#recommend .content');
+
+    $titles.click(function () {
+        $titles.removeClass();
+        $contents.css('display', 'inline-block');
+
+        $(this).addClass('active');
+        $contents.eq($(this).index()).css('display', 'block');
+    });
+    //
+    // console.log('tab');
+    // for (var i = 0; i < titles.length; i++) {
+    //     titles[i].index = i;
+    //     titles[i].onclick = function () {
+    //         for (var i = 0; i < titles.length; i++) {
+    //             titles[i].className = '';
+    //             contents[i].style.display = 'none';
+    //         }
+    //         titles[this.index].className = 'active';
+    //         contents[this.index].style.display = 'block';
+    //     }
+    // }
 })();
 
 //限时购
@@ -87,7 +98,7 @@ sayPic.init({
     var str = '';
     var item = json_promotion.itemList;
     for (var i = 0; i < item.length; i++) {
-        var precent = parseInt(Number(item[i].currentSellVolume) / Number(item[i].totalSellVolume)*100);
+        var precent = parseInt(Number(item[i].currentSellVolume) / Number(item[i].totalSellVolume) * 100);
         str += '<div class="limitBox left">\n' +
             '                <a href="#" class="scaleImg">\n' +
             '                    <img src="' + item[i].primaryPicUrl + '" alt="">\n' +
