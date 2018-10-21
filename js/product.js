@@ -133,7 +133,6 @@ positionFn.innerHTML += ('> ' + curData.name);
         var ln = curData.skuSpecList.length;  //规格的数量
 
         //是否打开加减的功能
-        console.log(actives.length, ln);
         if (actives.length == ln) {
             btnParents.className = '';
         } else {
@@ -205,9 +204,40 @@ positionFn.innerHTML += ('> ' + curData.name);
 (function () {
     yx.public.shopFn();
 
-    var joinBtn = yx.g('#productImg .join')
+    var joinBtn = yx.g('#productImg .join');
     joinBtn.onclick = function () {
-        alert(1);
+        var actives = yx.ga('#productImg .format .active');
+        var selectNum = yx.g('#productImg .number input').value;
+
+        if (actives.length < curData.skuSpecList.length || selectNum < 1) {
+            alert('请选择正确的规格以及数量');
+            return;
+        }
+
+        var id = '';
+        var spec = [];
+        for (var i = 0; i < actives.length; i++) {
+            id += actives[i].getAttribute('data-id') + ';';
+            spec.push(actives[i].innerHTML);
+        }
+        id = id.substr(0, id.length - 1);
+        var select = {
+            "id": id,
+            "name": curData.name,
+            "price": curData.retailPrice,
+            "num": selectNum,
+            "spec": spec,
+            "img": curData.skuMap[id].picUrl,
+            "sign": "productLocal",
+        };
+        localStorage.setItem(id, JSON.stringify(select));
+        yx.public.shopFn();
+
+        var cartWrap = yx.g('.cartWrap');
+        cartWrap.onmouseenter();
+        setTimeout(function() {
+            yx.g('.cart').style.display='none';
+        },1000)
     }
 }());
 
@@ -216,10 +246,10 @@ positionFn.innerHTML += ('> ' + curData.name);
     var ul = yx.g('#look ul');
     var str = '';
     for (var i = 0; i < recommendData.length; i++) {
-        str+='<li>\n' +
-            '     <a href="#" class="scaleImg"><img src="'+ recommendData[i].listPicUrl +'" alt=""></a>\n' +
-            '     <a href="#">'+ recommendData[i].name +'</a>\n' +
-            '     <span>¥ '+ recommendData[i].retailPrice +'</span>\n' +
+        str += '<li>\n' +
+            '     <a href="#" class="scaleImg"><img src="' + recommendData[i].listPicUrl + '" alt=""></a>\n' +
+            '     <a href="#">' + recommendData[i].name + '</a>\n' +
+            '     <span>¥ ' + recommendData[i].retailPrice + '</span>\n' +
             '</li>';
     }
     ul.innerHTML = str;
@@ -241,7 +271,6 @@ positionFn.innerHTML += ('> ' + curData.name);
 
 //评价
 (function () {
-    console.log(commentData);
     //修改标题上的文字
     var evaluate = commentData[pageId].data.result;
     var evaluateNum = evaluate.length;

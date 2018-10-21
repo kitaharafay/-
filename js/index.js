@@ -2,6 +2,7 @@
 yx.public.navFn();
 yx.public.lazyImgFn();
 yx.public.backUpFn();
+yx.public.shopFn();
 
 var bannerPic = new Carousel();
 bannerPic.init({

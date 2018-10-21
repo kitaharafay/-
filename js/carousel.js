@@ -25,7 +25,6 @@
         createDom: function () {
             var self = this;
             this.box = document.getElementById(this.settings.id);
-            console.log(this.box);
             //prev button
             this.prevBtn = document.createElement('div');
             this.prevBtn.className = 'prev';
@@ -87,7 +86,6 @@
                     this.opacityItem[0].style.opacity = '1';
                     break;
                 case 'position':
-                    console.log(this.positionItem[0]);
                     var leftMargin = parseInt(getComputedStyle(this.positionItem[0]).marginLeft);
                     var rightMargin = parseInt(getComputedStyle(this.positionItem[0]).marginRight);
                     this.singleWidth = leftMargin + this.positionItem[0].offsetWidth + rightMargin;

@@ -117,10 +117,71 @@ window.yx = {
             }
         },
         shopFn() {//购物车功能
+            //购物车添加商品
+            var productNum = 0;
+            (function (local) {
+                var totalPrice = 0;
+                var ul = yx.g('.cart ul')
+                var li = '';
+                ul.innerHTML = '';
+
+                console.log(local.length);
+                for (var i = 0; i < local.length; i++) {
+                    var attr = local.key(i);
+                    var value = JSON.parse(local[attr]);
+                    console.log(value);
+
+                    if (value && value.sign == 'productLocal') {
+                        li += '<li data-id="' + value.id + '">\n' +
+                            '   <a href="#" class="img"><img src="' + value.img + '"></a>\n' +
+                            '   <div class="message">\n' +
+                            '   <p><a href="#">' + value.name + '</a></p>\n' +
+                            '   <p>' + value.spec.join(' ') + ' x ' + value.num + '</p>\n' +
+                            '   </div>\n' +
+                            '   <div class="price">¥ ' + value.price + '.00</div>\n' +
+                            '   <div class="close">X</div>\n' +
+                            '  </li>';
+
+                        totalPrice += parseFloat(value.price) * parseFloat(value.num);
+                    }
+                }
+                ul.innerHTML = li;
+
+                //购物车里面有多少个商品
+                productNum = ul.children.length;
+
+                yx.g('.cartWrap i ').innerHTML = productNum;
+                yx.g('.cartWrap .total span').innerHTML = '¥ ' + totalPrice + '.00';
+
+
+                //删除按钮
+                var closeBtns = yx.ga('.cart .list .close');
+                for (var i = 0; i < closeBtns.length; i++) {
+                    closeBtns[i].onclick = function () {
+                        localStorage.removeItem(this.parentNode.getAttribute('data-id'));
+                        yx.public.shopFn();
+                    }
+                }
+
+                //小红圈事件
+                var cartWrap = yx.g('.cartWrap');
+                var timer;//解决购物车和弹出层的间隙会触发leave时间的问题
+                if (ul.children.length > 0) {
+                    cartWrap.onmouseenter = function () {
+                        clearInterval(timer);
+                        yx.g('.cart').style.display = 'block';
+                        scrollFn();
+                    }
+                    cartWrap.onmouseleave = function () {
+                        timer = setTimeout(function () {
+                            yx.g('.cart').style.display = 'none';
+                        }, 150);
+                    }
+                }
+
+            }(localStorage));
 
             //购物车的滚动条
-            scrollFn();
-            console.log(1);
             function scrollFn() {
                 var contentWrap = yx.g('.cart .list');
                 var content = yx.g('.cart .list ul');
