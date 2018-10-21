@@ -104,16 +104,17 @@ window.yx = {
         backUpFn: function () {//回到顶部功能
             var back = yx.g('.back');
             var timer;
-            back.onclick = function () {
+            back.onclick = function (ev) {
                 var top = window.pageYOffset;
                 timer = setInterval(function () {
-                    top -= 150;
+                    top -= 168;
                     if (top <= 0) {
                         top = 0;
                         clearInterval(timer);
                     }
                     window.scrollTo(0, top);
                 }, 16);
+                ev.cancelBubble = true;
             }
         },
         shopFn() {//购物车功能
